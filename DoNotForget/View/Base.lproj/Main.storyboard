@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,35 +19,47 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZQ-Rw-UHO" customClass="ShadowView" customModule="DoNotForget" customModuleProvider="target">
                                 <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUU-Ru-VmK">
-                                        <rect key="frame" x="100" y="30" width="100" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUU-Ru-VmK">
+                                        <rect key="frame" x="133" y="40" width="34" height="30"/>
+                                        <state key="normal" title="Time"/>
+                                        <connections>
+                                            <action selector="onTimeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="G8j-XX-Rgo"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnB-fS-iyo">
-                                        <rect key="frame" x="176" y="164" width="100" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnB-fS-iyo">
+                                        <rect key="frame" x="191" y="220" width="59" height="30"/>
+                                        <state key="normal" title="Location"/>
+                                        <connections>
+                                            <action selector="onLocationTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="BgJ-3I-zbz"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvJ-nS-4ci">
-                                        <rect key="frame" x="36" y="164" width="100" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvJ-nS-4ci">
+                                        <rect key="frame" x="50" y="220" width="33" height="30"/>
+                                        <state key="normal" title="Date"/>
+                                        <connections>
+                                            <action selector="onDateTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="FTS-UC-M7I"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="F0P-42-VoG"/>
+                                    <constraint firstAttribute="bottom" secondItem="SvJ-nS-4ci" secondAttribute="bottom" constant="50" id="Fcg-En-Vio"/>
+                                    <constraint firstItem="SvJ-nS-4ci" firstAttribute="leading" secondItem="vZQ-Rw-UHO" secondAttribute="leading" constant="50" id="Swv-QE-tX0"/>
+                                    <constraint firstAttribute="trailing" secondItem="AnB-fS-iyo" secondAttribute="trailing" constant="50" id="UET-ct-vYa"/>
+                                    <constraint firstItem="EUU-Ru-VmK" firstAttribute="top" secondItem="vZQ-Rw-UHO" secondAttribute="top" constant="40" id="XTV-OT-Ben"/>
+                                    <constraint firstAttribute="bottom" secondItem="AnB-fS-iyo" secondAttribute="bottom" constant="50" id="bai-j1-8Bk"/>
                                     <constraint firstAttribute="width" constant="300" id="h6R-y3-sy8"/>
+                                    <constraint firstItem="EUU-Ru-VmK" firstAttribute="centerX" secondItem="vZQ-Rw-UHO" secondAttribute="centerX" id="oYO-3U-tcf"/>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.12304593438971533" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vZQ-Rw-UHO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AkN-ac-HFU"/>
                             <constraint firstItem="vZQ-Rw-UHO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r4f-NI-KyQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

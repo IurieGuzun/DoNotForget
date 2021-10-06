@@ -12,9 +12,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        UNService.shared.authorize()
     }
 
-
+    @IBAction func onTimeTapped() {
+        print("Time")
+    }
+    @IBAction func onDateTapped() {
+        print("Date")
+    }
+    @IBAction func onLocationTapped() {
+        print("Location")
+    }
+    
+    
 }
 
