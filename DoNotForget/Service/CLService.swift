@@ -20,6 +20,10 @@ class CLService: NSObject {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
     }
+    func updateLocation() {
+        locationManager.startUpdatingLocation()
+    }
+    
 }
 
 extension CLService: CLLocationManagerDelegate {
