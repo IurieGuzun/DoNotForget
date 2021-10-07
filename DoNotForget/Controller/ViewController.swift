@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         CLService.shared.authorize()
         
         NotificationCenter.default.addObserver(self,
-                                               selector: <#T##Selector#>,
+                                               selector: #selector(didEnterRegion),
                                                name: NSNotification.Name("internalNotification.enteredRegion"),
                                                object: nil)
     }
@@ -44,7 +44,9 @@ class ViewController: UIViewController {
             CLService.shared.updateLocation()
         }
     }
-    
-    
+    @objc
+    func didEnterRegion() {
+        UNService.shared.locationRequest()
+    }
 }
 

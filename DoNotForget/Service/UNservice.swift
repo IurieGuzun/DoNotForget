@@ -32,6 +32,17 @@ class UNService: NSObject {
         unCenter.delegate = self
     }
     
+    func getAttachment(for id: NotificationAttachmentID) -> UNNotificationAttachment? {
+        var imageName: String
+        switch id {
+        case .time: imageName = "TimerAlert"
+        case .date: imageName = "DateAlert"
+        case .location: imageName = "LocationAlert"
+        }
+        
+        return nil
+    }
+    
     func timeRequest(with interval: TimeInterval) {
         let content = UNMutableNotificationContent()
         content.title = "Timer Finished!"
@@ -40,7 +51,9 @@ class UNService: NSObject {
         content.badge = 1
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
-        let request = UNNotificationRequest(identifier: "userNotification.timer", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "userNotification.timer",
+                                            content: content,
+                                            trigger: trigger)
         unCenter.add(request)
     }
     func dateRequest(with components: DateComponents) {
@@ -51,12 +64,23 @@ class UNService: NSObject {
         content.badge = 1
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
-        let request = UNNotificationRequest(identifier: "userNotification.date", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "userNotification.date",
+                                            content: content,
+                                            trigger: trigger)
         unCenter.add(request)
 
     }
-    func locationRequest(with interval: TimeInterval) {
-        
+    func locationRequest() {
+        let content = UNMutableNotificationContent()
+        content.title = "You have returned!"
+        content.body = "Welcome Back!"
+        content.sound = .default
+        content.badge = 1
+
+        let request = UNNotificationRequest(identifier: "userNotification.location",
+                                            content: content,
+                                            trigger: nil)
+        unCenter.add(request)
     }
 
     

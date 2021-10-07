@@ -10,6 +10,10 @@
 		8A0CBD34270E5F26000466DA /* UNservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CBD33270E5F26000466DA /* UNservice.swift */; };
 		8A0CBD36270F3D7F000466DA /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CBD35270F3D7F000466DA /* AlertService.swift */; };
 		8A0CBD38270F4353000466DA /* CLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CBD37270F4353000466DA /* CLService.swift */; };
+		8A0CBD3A270F57FB000466DA /* NotificationAttachmentID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CBD39270F57FB000466DA /* NotificationAttachmentID.swift */; };
+		8A112B5B270F5F0400ABDD0A /* LocationAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A112B5A270F5F0400ABDD0A /* LocationAlert.png */; };
+		8A112B5D270F5F1800ABDD0A /* DateAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A112B5C270F5F1800ABDD0A /* DateAlert.png */; };
+		8A112B5F270F5F2600ABDD0A /* TimeAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A112B5E270F5F2600ABDD0A /* TimeAlert.png */; };
 		8AB04E39270E4C7E008A0536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB04E38270E4C7E008A0536 /* AppDelegate.swift */; };
 		8AB04E3B270E4C7E008A0536 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB04E3A270E4C7E008A0536 /* SceneDelegate.swift */; };
 		8AB04E3D270E4C7E008A0536 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB04E3C270E4C7E008A0536 /* ViewController.swift */; };
@@ -23,6 +27,10 @@
 		8A0CBD33270E5F26000466DA /* UNservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNservice.swift; sourceTree = "<group>"; };
 		8A0CBD35270F3D7F000466DA /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		8A0CBD37270F4353000466DA /* CLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLService.swift; sourceTree = "<group>"; };
+		8A0CBD39270F57FB000466DA /* NotificationAttachmentID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAttachmentID.swift; sourceTree = "<group>"; };
+		8A112B5A270F5F0400ABDD0A /* LocationAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationAlert.png; sourceTree = "<group>"; };
+		8A112B5C270F5F1800ABDD0A /* DateAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DateAlert.png; sourceTree = "<group>"; };
+		8A112B5E270F5F2600ABDD0A /* TimeAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimeAlert.png; sourceTree = "<group>"; };
 		8AB04E35270E4C7E008A0536 /* DoNotForget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoNotForget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB04E38270E4C7E008A0536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AB04E3A270E4C7E008A0536 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +56,9 @@
 		8A0CBD32270E5B04000466DA /* NotificationsAssets */ = {
 			isa = PBXGroup;
 			children = (
+				8A112B5C270F5F1800ABDD0A /* DateAlert.png */,
+				8A112B5E270F5F2600ABDD0A /* TimeAlert.png */,
+				8A112B5A270F5F0400ABDD0A /* LocationAlert.png */,
 			);
 			path = NotificationsAssets;
 			sourceTree = "<group>";
@@ -115,6 +126,7 @@
 		8AB04E4F270E4D1D008A0536 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8A0CBD39270F57FB000466DA /* NotificationAttachmentID.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,8 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AB04E45270E4C80008A0536 /* LaunchScreen.storyboard in Resources */,
+				8A112B5D270F5F1800ABDD0A /* DateAlert.png in Resources */,
+				8A112B5B270F5F0400ABDD0A /* LocationAlert.png in Resources */,
 				8AB04E42270E4C80008A0536 /* Assets.xcassets in Resources */,
 				8AB04E40270E4C7E008A0536 /* Main.storyboard in Resources */,
+				8A112B5F270F5F2600ABDD0A /* TimeAlert.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +211,7 @@
 				8A0CBD38270F4353000466DA /* CLService.swift in Sources */,
 				8AB04E39270E4C7E008A0536 /* AppDelegate.swift in Sources */,
 				8A0CBD36270F3D7F000466DA /* AlertService.swift in Sources */,
+				8A0CBD3A270F57FB000466DA /* NotificationAttachmentID.swift in Sources */,
 				8AB04E3B270E4C7E008A0536 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
